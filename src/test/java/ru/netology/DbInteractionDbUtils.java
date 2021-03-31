@@ -45,12 +45,12 @@ public class DbInteractionDbUtils {
                         "jdbc:mysql://192.168.99.100:3306/app", "app", "pass"
                 );
         ) {
-          val count = runner.query(conn, countSQL, new ScalarHandler<>());
-          System.out.println(count);
-          val first = runner.query(conn, usersSQL, new BeanHandler<>(User.class));
-          System.out.println(first);
-          val all = runner.query(conn, usersSQL, new BeanListHandler<>(User.class));
-          System.out.println(all);
+            val count = runner.query(conn, countSQL, new ScalarHandler<>());
+            System.out.println(count);
+            val first = runner.query(conn, usersSQL, new BeanHandler<>(User.class));
+            System.out.println(first);
+            val all = runner.query(conn, usersSQL, new BeanListHandler<>(User.class));
+            System.out.println(all);
         }
     }
 }
