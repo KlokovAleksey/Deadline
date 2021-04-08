@@ -35,3 +35,4 @@ SELECT max(cards.balance_in_kopecks) FROM cards;
 SELECT sum(balance_in_kopecks) FROM cards WHERE user_id = 1;
 
 SELECT count(*), user_id FROM cards GROUP BY user_id;
+
