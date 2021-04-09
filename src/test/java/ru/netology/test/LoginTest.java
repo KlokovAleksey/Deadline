@@ -7,7 +7,8 @@ import ru.netology.page.DashboardPage;
 import ru.netology.page.LoginPage;
 import ru.netology.page.VerificationPage;
 import static com.codeborne.selenide.Selenide.open;
-import static ru.netology.mode.DataHelper.*;
+import static ru.netology.mode.DataHelper.cleanDataBase;
+
 
 public class LoginTest {
 
@@ -20,6 +21,6 @@ public class LoginTest {
         verificationPage.validVerify(DataHelper.getVerificationCode(DataHelper.getAuthInfo()));
         val dashboardPage = new DashboardPage();
         dashboardPage.dashboardPage();
-        cleanDataBase();
+        DataHelper.cleanDataBase();
     }
 }
